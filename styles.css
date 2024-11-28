@@ -145,20 +145,6 @@ nav ul li a:hover {
   color: #f39c12; /* Kolor podświetlenia przy najechaniu */
 }
 
-/* Styl przycisku "Buy Now" */
-.buy-btn {
-  background-color: #f39c12; /* Kolor przycisku */
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #333;
-}
-
-.buy-btn:hover {
-  background-color: #e67e22; /* Kolor przycisku przy najechaniu */
-  color: white;
-}
-
 /* Styl dla sekcji 'How to Buy' */
 #how-to-buy {
   padding: 40px 20px;
@@ -180,6 +166,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: start;
   gap: 20px; /* Odstęp między ikoną a tekstem */
+  transition: all 0.3s ease-in-out; /* Animacja przejścia */
 }
 
 /* Ikona */
@@ -210,3 +197,63 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  #how-to-buy {
+    padding: 30px 10px;
+  }
+
+  /* Zmniejszenie marginesów i paddingów */
+  .how-to-item {
+    width: 90%; /* Zmniejszenie szerokości na mniejszych ekranach */
+    flex-direction: column; /* Ustawienie elementów w kolumnie */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    padding: 20px;
+    gap: 15px; /* Mniejszy odstęp między ikoną a tekstem */
+  }
+
+  /* Zmniejszenie rozmiaru ikon */
+  .how-to-item .icon {
+    font-size: 30px; /* Mniejsza ikona na małych ekranach */
+  }
+
+  /* Zmniejszenie nagłówka */
+  .how-to-item h3 {
+    font-size: 20px;
+  }
+
+  /* Zmniejszenie czcionki w paragrafie */
+  .how-to-item p {
+    font-size: 14px;
+  }
+
+  /* Zmniejszenie nagłówka sekcji */
+  #how-to-buy h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Zmniejszenie jeszcze bardziej dla bardzo małych ekranów */
+  .how-to-item {
+    width: 95%; /* Jeszcze mniejsza szerokość */
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .how-to-item .icon {
+    font-size: 25px; /* Jeszcze mniejsza ikona */
+  }
+
+  .how-to-item h3 {
+    font-size: 18px;
+  }
+
+  .how-to-item p {
+    font-size: 12px; /* Mniejsza czcionka na małych ekranach */
+  }
+
+  #how-to-buy h2 {
+    font-size: 24px;
+  }
+}
