@@ -1,15 +1,21 @@
-/* styles.css */
-body {
-  font-family: Arial, sans-serif;
+/* Globalne resetowanie marginesów i paddingu */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ogólny styl strony */
+body {
+  font-family: Arial, sans-serif;
   background: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
+/* Nagłówek */
 header {
-  background: #222;
+  background: #333;
   color: white;
   padding: 15px 20px;
 }
@@ -25,10 +31,9 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* Nawigacja */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
 }
 
@@ -42,27 +47,12 @@ nav ul li a {
   font-size: 1rem;
 }
 
+/* Main Content */
 main {
   padding: 20px;
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-section h2 {
-  color: #222;
-}
-
-.link-list {
-  list-style: none;
-  padding: 0;
-}
-
-.link-list li {
-  margin: 10px 0;
-}
-
+/* Footer */
 footer {
   text-align: center;
   padding: 10px 0;
@@ -70,92 +60,17 @@ footer {
   color: white;
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
-  header {
-    text-align: center;
-  }
-
-  header .container {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
-  }
-
-  header h1 {
-    font-size: 1.2rem;
-  }
-
-  nav ul li a {
-    font-size: 0.9rem;
-  }
-}
-/* Resetowanie marginesów i paddingu dla wszystkich elementów */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Styl paska nawigacyjnego */
-header {
-  background-color: #333; /* Kolor tła navbar */
-  padding: 10px 0; /* Odstępy wewnętrzne */
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-/* Efekt hover dla linków */
-nav ul li a:hover {
-  color: #f39c12; /* Kolor podświetlenia przy najechaniu */
-}
-
 /* Styl dla sekcji 'How to Buy' */
 #how-to-buy {
   padding: 40px 20px;
   background-color: #2f6f31; /* Zielone tło */
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
-/* Styl dla poszczególnych podsekcji */
+/* Podsekcje 'How to Buy' */
 .how-to-item {
-  background-color: #387f44; /* Jaśniejszy zielony */
+  background-color: #387f44;
   margin: 20px auto;
   padding: 30px;
   border-radius: 10px;
@@ -165,84 +80,79 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 20px; /* Odstęp między ikoną a tekstem */
-  transition: all 0.3s ease-in-out; /* Animacja przejścia */
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Ikona */
+/* Ikona w podsekcjach */
 .how-to-item .icon {
   font-size: 40px;
   color: white;
 }
 
-/* Nagłówek sekcji */
+/* Nagłówek podsekcji */
 .how-to-item h3 {
   font-size: 24px;
   color: white;
   margin-bottom: 10px;
 }
 
-/* Akapit */
+/* Treść podsekcji */
 .how-to-item p {
   font-size: 16px;
   color: #f2f2f2;
   line-height: 1.6;
-  flex-grow: 1; /* Pozwoli to, by tekst rozciągał się w przestrzeni */
+  flex-grow: 1;
 }
 
-/* Nagłówek sekcji głównej */
+/* Nagłówek sekcji */
 #how-to-buy h2 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-/* Responsywność dla urządzeń mobilnych */
+/* Responsywność dla ekranów większych niż 768px */
 @media (max-width: 768px) {
   #how-to-buy {
     padding: 30px 10px;
   }
 
-  /* Zmniejszenie marginesów i paddingów */
   .how-to-item {
-    width: 90%; /* Zmniejszenie szerokości na mniejszych ekranach */
-    flex-direction: column; /* Ustawienie elementów w kolumnie */
-    text-align: left; /* Wyrównanie tekstu do lewej */
+    width: 90%;
+    flex-direction: column;
+    text-align: left;
     padding: 20px;
-    gap: 15px; /* Mniejszy odstęp między ikoną a tekstem */
+    gap: 15px;
   }
 
-  /* Zmniejszenie rozmiaru ikon */
   .how-to-item .icon {
-    font-size: 30px; /* Mniejsza ikona na małych ekranach */
+    font-size: 30px;
   }
 
-  /* Zmniejszenie nagłówka */
   .how-to-item h3 {
     font-size: 20px;
   }
 
-  /* Zmniejszenie czcionki w paragrafie */
   .how-to-item p {
     font-size: 14px;
   }
 
-  /* Zmniejszenie nagłówka sekcji */
   #how-to-buy h2 {
     font-size: 28px;
   }
 }
 
+/* Responsywność dla ekranów mniejszych niż 480px */
 @media (max-width: 480px) {
-  /* Zmniejszenie jeszcze bardziej dla bardzo małych ekranów */
   .how-to-item {
-    width: 95%; /* Jeszcze mniejsza szerokość */
+    width: 95%;
     padding: 15px;
     gap: 10px;
   }
 
   .how-to-item .icon {
-    font-size: 25px; /* Jeszcze mniejsza ikona */
+    font-size: 25px;
   }
 
   .how-to-item h3 {
@@ -250,7 +160,7 @@ nav ul li a:hover {
   }
 
   .how-to-item p {
-    font-size: 12px; /* Mniejsza czcionka na małych ekranach */
+    font-size: 12px;
   }
 
   #how-to-buy h2 {
