@@ -162,37 +162,51 @@ nav ul li a:hover {
 /* Styl dla sekcji 'How to Buy' */
 #how-to-buy {
   padding: 40px 20px;
-  background-color: #f4f4f4;
+  background-color: #2f6f31; /* Zielone tło */
   text-align: center;
+  color: white;
 }
 
 /* Styl dla poszczególnych podsekcji */
 .how-to-item {
-  background-color: #fff;
+  background-color: #387f44; /* Jaśniejszy zielony */
   margin: 20px auto;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   width: 80%;
   max-width: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px; /* Odstęp między ikoną a tekstem */
 }
 
+/* Ikona */
+.how-to-item .icon {
+  font-size: 40px;
+  color: white;
+}
+
+/* Nagłówek sekcji */
 .how-to-item h3 {
   font-size: 24px;
-  color: #333;
+  color: white;
   margin-bottom: 10px;
 }
 
+/* Akapit */
 .how-to-item p {
   font-size: 16px;
-  color: #555;
+  color: #f2f2f2;
   line-height: 1.6;
+  flex-grow: 1; /* Pozwoli to, by tekst rozciągał się w przestrzeni */
 }
 
-/* Stylowanie sekcji z tłem */
+/* Nagłówek sekcji głównej */
 #how-to-buy h2 {
   font-size: 32px;
   font-weight: bold;
-  color: #333;
   margin-bottom: 30px;
 }
+
