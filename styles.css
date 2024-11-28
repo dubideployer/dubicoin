@@ -108,3 +108,54 @@ footer {
     font-size: 0.9rem;
   }
 }
+/* Resetowanie marginesów i paddingu dla wszystkich elementów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styl paska nawigacyjnego */
+header {
+  background-color: #333; /* Kolor tła navbar */
+  padding: 10px 0; /* Odstępy wewnętrzne */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+/* Efekt hover dla linków */
+nav ul li a:hover {
+  color: #f39c12; /* Kolor podświetlenia przy najechaniu */
+}
+
+/* Styl przycisku "Buy Now" */
+.buy-btn {
+  background-color: #f39c12; /* Kolor przycisku */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.buy-btn:hover {
+  background-color: #e67e22; /* Kolor przycisku przy najechaniu */
+  color: white;
+}
+
