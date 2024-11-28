@@ -1,112 +1,50 @@
-/* Styl dla sekcji 'How to Buy' */
-#how-to-buy {
-  padding: 40px 20px;
-  background-color: #2f6f31; /* Zielone tło */
-  text-align: center;
-  color: white;
+/* Resetowanie marginesów i paddingu dla wszystkich elementów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styl dla poszczególnych podsekcji */
-.how-to-item {
-  background-color: #387f44; /* Jaśniejszy zielony */
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Styl paska nawigacyjnego */
+header {
+  background-color: #333; /* Kolor tła navbar */
+  padding: 10px 0; /* Odstępy wewnętrzne */
+}
+
+nav ul {
+  list-style-type: none;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
-  gap: 20px; /* Odstęp między ikoną a tekstem */
-  transition: all 0.3s ease-in-out; /* Animacja przejścia */
 }
 
-/* Ikona */
-.how-to-item .icon {
-  font-size: 40px;
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
   color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
-/* Nagłówek sekcji */
-.how-to-item h3 {
-  font-size: 24px;
-  color: white;
-  margin-bottom: 10px;
+/* Efekt hover dla linków */
+nav ul li a:hover {
+  color: #f39c12; /* Kolor podświetlenia przy najechaniu */
 }
 
-/* Akapit */
-.how-to-item p {
-  font-size: 16px;
-  color: #f2f2f2;
-  line-height: 1.6;
-  flex-grow: 1; /* Pozwoli to, by tekst rozciągał się w przestrzeni */
-}
-
-/* Nagłówek sekcji głównej */
-#how-to-buy h2 {
-  font-size: 32px;
+/* Styl przycisku "Buy Now" */
+.buy-btn {
+  background-color: #f39c12; /* Kolor przycisku */
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: bold;
-  margin-bottom: 30px;
+  color: #333;
 }
 
-/* Responsywność dla urządzeń mobilnych */
-@media (max-width: 768px) {
-  #how-to-buy {
-    padding: 30px 10px;
-  }
-
-  /* Zmniejszenie marginesów i paddingów */
-  .how-to-item {
-    width: 90%; /* Zmniejszenie szerokości na mniejszych ekranach */
-    flex-direction: column; /* Ustawienie elementów w kolumnie */
-    text-align: left; /* Wyrównanie tekstu do lewej */
-    padding: 20px;
-    gap: 15px; /* Mniejszy odstęp między ikoną a tekstem */
-  }
-
-  /* Zmniejszenie rozmiaru ikon */
-  .how-to-item .icon {
-    font-size: 30px; /* Mniejsza ikona na małych ekranach */
-  }
-
-  /* Zmniejszenie nagłówka */
-  .how-to-item h3 {
-    font-size: 20px;
-  }
-
-  /* Zmniejszenie czcionki w paragrafie */
-  .how-to-item p {
-    font-size: 14px;
-  }
-
-  /* Zmniejszenie nagłówka sekcji */
-  #how-to-buy h2 {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Zmniejszenie jeszcze bardziej dla bardzo małych ekranów */
-  .how-to-item {
-    width: 95%; /* Jeszcze mniejsza szerokość */
-    padding: 15px;
-    gap: 10px;
-  }
-
-  .how-to-item .icon {
-    font-size: 25px; /* Jeszcze mniejsza ikona */
-  }
-
-  .how-to-item h3 {
-    font-size: 18px;
-  }
-
-  .how-to-item p {
-    font-size: 12px; /* Mniejsza czcionka na małych ekranach */
-  }
-
-  #how-to-buy h2 {
-    font-size: 24px;
-  }
+.buy-btn:hover {
+  background-color: #e67e22; /* Kolor przycisku przy najechaniu */
+  color: white;
 }
