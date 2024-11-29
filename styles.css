@@ -1,3 +1,10 @@
+/* Resetowanie marginesów i paddingu dla wszystkich elementów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Sekcja 'How to Buy' */
 #how-to-buy {
   padding: 40px 20px;
@@ -33,14 +40,12 @@
   font-size: 24px;
   color: white;
   margin-bottom: 10px;
-  text-align: center; /* Wyśrodkowanie tytułów */
 }
 
 .how-to-item p {
   font-size: 16px;
   color: #f2f2f2;
   line-height: 1.6;
-  text-align: justify; /* Wyjustowanie treści */
 }
 
 /* Linki w sekcji 'Go to Uniswap' */
