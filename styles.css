@@ -5,20 +5,24 @@
   box-sizing: border-box;
 }
 
-/* Styl paska nawigacyjnego */
-header {
+
   /* Sticky navbar */
 header {
+  transition: all 0.3s ease; /* Dodaj płynne przejście */
   position: -webkit-sticky; /* Obsługuje Safari */
   position: sticky;
   top: 0; /* Przypisuje nagłówek na górze */
   z-index: 1000; /* Ustala priorytet wyświetlania (np. nad innymi elementami) */
   background-color: #333; /* Tło nawigacji */
   padding: 10px 0; /* Odstępy wewnętrzne */
-}
+
 
   background-color: #333; /* Kolor tła navbar */
   padding: 10px 0; /* Odstępy wewnętrzne */
+}
+header.sticky {
+  background-color: #222; /* Zmiana koloru tła po przyklejeniu */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Cień dla lepszego efektu */
 }
 
 nav ul {
