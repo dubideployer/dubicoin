@@ -249,3 +249,62 @@ nav ul li .dropdown-content a:hover {
   background-color: #222; /* Przykładowy kolor tła */
 }
 
+/* Styl dla sekcji 'Go to Uniswap' */
+#go-to-uniswap {
+  background-color: #2f6f31; /* Zielone tło */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Styl dla sekcji 'Switch ETH for $PEPE' */
+#switch-eth-pepe {
+  background-color: #387f44; /* Jaśniejszy zielony */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Styl dla treści w sekcjach */
+#go-to-uniswap .content, #switch-eth-pepe .content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Link w sekcjach */
+#go-to-uniswap a, #switch-eth-pepe a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#go-to-uniswap a:hover, #switch-eth-pepe a:hover {
+  text-decoration: underline;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  #go-to-uniswap, #switch-eth-pepe {
+    padding: 30px 10px;
+  }
+
+  #go-to-uniswap h2, #switch-eth-pepe h2 {
+    font-size: 28px;
+  }
+
+  #go-to-uniswap .content, #switch-eth-pepe .content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #go-to-uniswap h2, #switch-eth-pepe h2 {
+    font-size: 24px;
+  }
+
+  #go-to-uniswap .content, #switch-eth-pepe .content {
+    font-size: 12px;
+  }
+}
