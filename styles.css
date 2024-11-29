@@ -210,3 +210,34 @@ nav ul li a:hover {
     height: 400px;
   }
 }
+/* Styl dla rozwijanego menu w sekcji About */
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-content {
+  display: none; /* Ukrywa menu */
+  position: absolute;
+  background-color: #333;
+  min-width: 160px; /* Minimalna szerokość */
+  z-index: 1;
+  padding: 10px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Cień dla menu */
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block; /* Pokazuje menu po najechaniu */
+}
+
+nav ul li .dropdown-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li .dropdown-content a:hover {
+  background-color: #f39c12; /* Kolor podświetlenia przy najechaniu */
+}
