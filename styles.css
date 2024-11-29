@@ -7,6 +7,16 @@
 
 /* Styl paska nawigacyjnego */
 header {
+  /* Sticky navbar */
+header {
+  position: -webkit-sticky; /* Obsługuje Safari */
+  position: sticky;
+  top: 0; /* Przypisuje nagłówek na górze */
+  z-index: 1000; /* Ustala priorytet wyświetlania (np. nad innymi elementami) */
+  background-color: #333; /* Tło nawigacji */
+  padding: 10px 0; /* Odstępy wewnętrzne */
+}
+
   background-color: #333; /* Kolor tła navbar */
   padding: 10px 0; /* Odstępy wewnętrzne */
 }
