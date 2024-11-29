@@ -7,3 +7,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+<script>
+  window.onscroll = function() {toggleStickyNavbar()};
+
+  var header = document.querySelector("header");
+  var sticky = header.offsetTop;
+
+  function toggleStickyNavbar() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
