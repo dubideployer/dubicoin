@@ -241,3 +241,11 @@ nav ul li .dropdown-content a {
 nav ul li .dropdown-content a:hover {
   background-color: #f39c12; /* Kolor podświetlenia przy najechaniu */
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #222; /* Przykładowy kolor tła */
+}
+
