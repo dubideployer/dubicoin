@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DubiCoin</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Pasek nawigacyjny -->
+  <nav class="navbar has-background-primary is-fixed-top">
+    <div class="container is-flex is-align-items-center is-justify-content-space-between">
+      <div class="navbar-menu is-flex-grow-1">
+        <div class="navbar-start">
+          <a class="navbar-item has-text-white" href="#home">Home</a>
+          <a class="navbar-item has-text-white" href="#about">About</a>
+          <a class="navbar-item has-text-white" href="#how-to-buy">How to Buy</a>
+          <a class="navbar-item has-text-white" href="#tokenomics">Tokenomics</a>
+          <a class="navbar-item has-text-white" href="#roadmap">Roadmap</a>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item button is-warning is-rounded" href="https://app.uniswap.org/" target="_blank">Buy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sekcja HERO -->
+  <header id="home" class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Welcome to DubiCoin</h1>
+        <p class="subtitle">Your future starts here!</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sekcja ABOUT -->
+    <section id="about" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="title">ABOUT</h2>
+        <p>Your text about the project here...</p>
+      </div>
+    </section>
+
+    <!-- Sekcja ANIMACJI -->
+    <section id="animation" class="section" data-aos="fade-up">
+      <div class="container has-text-centered">
+        <h2 class="title">Orbit Animation</h2>
+        <div id="circle-orbit-container">
+          <!-- Wewnętrzna orbita -->
+          <div id="inner-orbit">
+            <div class="inner-orbit-circles"></div>
+          </div>
+
+          <!-- Środkowa orbita -->
+          <div id="middle-orbit">
+            <div class="middle-orbit-circles"></div>
+          </div>
+
+          <!-- Zewnętrzna orbita -->
+          <div id="outer-orbit">
+            <div class="outer-orbit-circles"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kolejne sekcje -->
+    <section id="how-to-buy" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="title">How to Buy</h2>
+        <p>Instructions for buying the token...</p>
+      </div>
+    </section>
+
+    <section id="tokenomics" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="title">Tokenomics</h2>
+        <p>Details about token distribution...</p>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="title">Roadmap</h2>
+        <p>Roadmap description...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>© 2024 DubiCoin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>

@@ -1,42 +1,35 @@
-<script>
-  // Smooth Scroll - przewijanie do sekcji na stronie po kliknięciu na link
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Sticky Navbar - sprawia, że pasek nawigacyjny przykleja się do góry podczas przewijania
-  window.onscroll = function() { toggleStickyNavbar(); };
-  
-  var header = document.querySelector("header");
-  var sticky = header.offsetTop;
-
-  function toggleStickyNavbar() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-
-  // Dropdown Menu - rozwijane menu dla sekcji About
-  document.querySelector('.dropdown').addEventListener('click', function(event) {
-    var dropdownMenu = this.querySelector('.dropdown-content');
-    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
-    event.stopPropagation(); // Zatrzymuje propagację kliknięcia
-  });
-
-  // Zamknięcie menu, gdy klikniemy poza menu
-  document.addEventListener('click', function(event) {
-    var dropdowns = document.querySelectorAll('.dropdown-content');
-    dropdowns.forEach(function(menu) {
-      if (!menu.contains(event.target)) {
-        menu.style.display = 'none'; // Ukrywa menu
+document.addEventListener("DOMContentLoaded", () => {
+  // Płynne przewijanie
+  const links = document.querySelectorAll('.navbar a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 50,
+          behavior: 'smooth',
+        });
       }
     });
   });
-</script>
+
+  // Podświetlanie aktywnej sekcji
+  const sections = document.querySelectorAll('section, header');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 60;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    links.forEach(link => {
+      link.classList.remove('is-active');
+      if (link.getAttribute('href').substring(1) === current) {
+        link.classList.add('is-active');
+      }
+    });
+  });
+});

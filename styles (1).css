@@ -1,0 +1,88 @@
+/* ---------- Stylizacja Navbar ---------- */
+.navbar {
+  padding: 10px;
+}
+
+.navbar a.is-active {
+  color: #ffdd57;
+  font-weight: bold;
+}
+
+/* ---------- Stylizacja Orbit ---------- */
+#circle-orbit-container {
+  position: relative;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+
+#inner-orbit, #middle-orbit, #outer-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px dashed #4A437F;
+  animation: spin-right 10s linear infinite;
+}
+
+#inner-orbit {
+  top: 75px;
+  left: 75px;
+  width: 150px;
+  height: 150px;
+  animation-duration: 10s;
+}
+
+.inner-orbit-circles {
+  position: absolute;
+  top: 62px;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #9F98E6;
+}
+
+#middle-orbit {
+  top: 35px;
+  left: 35px;
+  width: 225px;
+  height: 225px;
+  animation-duration: 15s;
+}
+
+.middle-orbit-circles {
+  position: absolute;
+  top: 25px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4A437F;
+}
+
+#outer-orbit {
+  top: 0;
+  left: 0;
+  width: 294px;
+  height: 294px;
+  animation-duration: 20s;
+}
+
+.outer-orbit-circles {
+  position: absolute;
+  top: -17px;
+  left: 125px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #00FFCA;
+}
+
+/* Animacja */
+@keyframes spin-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
