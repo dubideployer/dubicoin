@@ -1,3 +1,19 @@
+#iframe-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden; /* Ukrywa nadmiarowy kontent */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block; /* Zamyka zbędne marginesy wokół iframe */
+}
+
+
+
 /* Resetowanie marginesów i paddingu dla wszystkich elementów */
 * {
   margin: 0;
