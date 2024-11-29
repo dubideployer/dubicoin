@@ -1,15 +1,17 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+<script>
+  // Smooth Scroll - przewijanie do sekcji na stronie po kliknięciu na link
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   });
-});
-<script>
-  window.onscroll = function() {toggleStickyNavbar()};
 
+  // Sticky Navbar - sprawia, że pasek nawigacyjny przykleja się do góry podczas przewijania
+  window.onscroll = function() { toggleStickyNavbar(); };
+  
   var header = document.querySelector("header");
   var sticky = header.offsetTop;
 
@@ -20,20 +22,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       header.classList.remove("sticky");
     }
   }
-</script>
-<script>
+
+  // Dropdown Menu - rozwijane menu dla sekcji About
   document.querySelector('.dropdown').addEventListener('click', function(event) {
     var dropdownMenu = this.querySelector('.dropdown-content');
     dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
-    event.stopPropagation();
+    event.stopPropagation(); // Zatrzymuje propagację kliknięcia
   });
 
-  // Zamknięcie menu, gdy użytkownik kliknie gdziekolwiek poza menu
+  // Zamknięcie menu, gdy klikniemy poza menu
   document.addEventListener('click', function(event) {
     var dropdowns = document.querySelectorAll('.dropdown-content');
     dropdowns.forEach(function(menu) {
       if (!menu.contains(event.target)) {
-        menu.style.display = 'none';
+        menu.style.display = 'none'; // Ukrywa menu
       }
     });
   });
