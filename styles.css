@@ -5,8 +5,7 @@
   box-sizing: border-box;
 }
 
-
-  /* Sticky navbar */
+/* Sticky navbar */
 header {
   transition: all 0.3s ease; /* Dodaj płynne przejście */
   position: -webkit-sticky; /* Obsługuje Safari */
@@ -15,11 +14,8 @@ header {
   z-index: 1000; /* Ustala priorytet wyświetlania (np. nad innymi elementami) */
   background-color: #333; /* Tło nawigacji */
   padding: 10px 0; /* Odstępy wewnętrzne */
-
-
-  background-color: #333; /* Kolor tła navbar */
-  padding: 10px 0; /* Odstępy wewnętrzne */
 }
+
 header.sticky {
   background-color: #222; /* Zmiana koloru tła po przyklejeniu */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Cień dla lepszego efektu */
@@ -172,6 +168,7 @@ nav ul li a:hover {
     font-size: 24px;
   }
 }
+
 /* Sekcja Uniswap */
 #uniswap {
   background-color: #2f6f31;  /* Zielony kolor tła */
@@ -210,6 +207,55 @@ nav ul li a:hover {
     height: 400px;
   }
 }
+
+/* Sekcja Go to Uniswap */
+#go-to-uniswap {
+  background-color: #2f6f31; /* Zielone tło */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#go-to-uniswap h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#go-to-uniswap p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#go-to-uniswap iframe {
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Sekcja Switch ETH for $PEPE */
+#switch-eth-pepe {
+  background-color: #387f44; /* Jaśniejszy zielony */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#switch-eth-pepe h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#switch-eth-pepe p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#switch-eth-pepe iframe {
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Styl dla rozwijanego menu w sekcji About */
 nav ul li.dropdown {
   position: relative;
@@ -241,47 +287,14 @@ nav ul li .dropdown-content a {
 nav ul li .dropdown-content a:hover {
   background-color: #f39c12; /* Kolor podświetlenia przy najechaniu */
 }
+
+/* Sticky nawigacja */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background-color: #222; /* Przykładowy kolor tła */
-}
-
-/* Styl dla sekcji 'Go to Uniswap' */
-#go-to-uniswap {
-  background-color: #2f6f31; /* Zielone tło */
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-/* Styl dla sekcji 'Switch ETH for $PEPE' */
-#switch-eth-pepe {
-  background-color: #387f44; /* Jaśniejszy zielony */
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-/* Styl dla treści w sekcjach */
-#go-to-uniswap .content, #switch-eth-pepe .content {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Link w sekcjach */
-#go-to-uniswap a, #switch-eth-pepe a {
-  color: #f39c12;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#go-to-uniswap a:hover, #switch-eth-pepe a:hover {
-  text-decoration: underline;
 }
 
 /* Responsywność dla urządzeń mobilnych */
