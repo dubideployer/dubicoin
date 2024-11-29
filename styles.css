@@ -5,7 +5,61 @@
   box-sizing: border-box;
 }
 
-/* Stylizacja iframe */
+/* Sekcja 'How to Buy' */
+#how-to-buy {
+  padding: 40px 20px;
+  background-color: #2f6f31; /* Zielone tło */
+  text-align: center;
+  color: white;
+}
+
+.how-to-item {
+  background-color: #387f44; /* Jaśniejszy zielony */
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.how-to-item .icon {
+  font-size: 50px; /* Ikony mają jedną wielkość */
+  color: white;
+}
+
+.how-to-item .content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.how-to-item h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.how-to-item p {
+  font-size: 16px;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+/* Linki w sekcji 'Go to Uniswap' */
+.how-to-item a {
+  color: #f39c12; /* Kolor linków */
+  text-decoration: none;
+}
+
+.how-to-item a:hover {
+  text-decoration: underline;
+  color: #f39c12;
+}
+
+/* Styl iframe */
 #iframe-container, #uniswap iframe, #go-to-uniswap iframe, #switch-eth-pepe iframe {
   width: 100%;
   height: 600px;
@@ -19,6 +73,27 @@
 #iframe-container {
   position: relative;
   overflow: hidden;
+}
+
+/* Sekcja Uniswap */
+#uniswap, #go-to-uniswap, #switch-eth-pepe {
+  background-color: #2f6f31;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+#uniswap h2, #go-to-uniswap h2, #switch-eth-pepe h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#uniswap p, #go-to-uniswap p, #switch-eth-pepe p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 /* Sticky navbar */
@@ -84,46 +159,9 @@ nav ul li .dropdown-content a:hover {
   background-color: #f39c12;
 }
 
-/* Sekcja 'How to Buy' */
-#how-to-buy {
-  padding: 40px 20px;
-  background-color: #2f6f31;
-  text-align: center;
-  color: white;
-}
-
-.how-to-item {
-  background-color: #387f44;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.how-to-item .icon {
-  font-size: 40px;
-  color: white;
-}
-
-.how-to-item h3 {
-  font-size: 24px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.how-to-item p {
-  font-size: 16px;
-  color: #f2f2f2;
-  line-height: 1.6;
-  flex-grow: 1;
-}
-
 /* Responsywność */
+
+/* Dla urządzeń o szerokości ekranu mniejszej niż 768px */
 @media (max-width: 768px) {
   header {
     text-align: center;
@@ -141,14 +179,14 @@ nav ul li .dropdown-content a:hover {
   }
 
   .how-to-item .icon {
-    font-size: 30px;
+    font-size: 40px; /* Mniejsza ikona */
   }
 
   #how-to-buy h2 {
     font-size: 28px;
   }
 
-  #uniswap iframe {
+  #uniswap iframe, #go-to-uniswap iframe {
     height: 500px;
   }
 
@@ -161,6 +199,7 @@ nav ul li .dropdown-content a:hover {
   }
 }
 
+/* Dla urządzeń o szerokości ekranu mniejszej niż 480px */
 @media (max-width: 480px) {
   .how-to-item {
     width: 95%;
@@ -168,45 +207,15 @@ nav ul li .dropdown-content a:hover {
   }
 
   .how-to-item .icon {
-    font-size: 25px;
+    font-size: 30px; /* Jeszcze mniejsza ikona */
   }
 
   #how-to-buy h2 {
     font-size: 24px;
   }
 
-  #uniswap iframe {
+  #uniswap iframe, #go-to-uniswap iframe {
     height: 400px;
   }
 
-  #go-to-uniswap h2, #switch-eth-pepe h2 {
-    font-size: 24px;
-  }
-}
-
-/* Sekcja Uniswap */
-#uniswap, #go-to-uniswap, #switch-eth-pepe {
-  background-color: #2f6f31;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 10px;
-  margin-top: 40px;
-}
-
-#uniswap h2, #go-to-uniswap h2, #switch-eth-pepe h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#uniswap p, #go-to-uniswap p, #switch-eth-pepe p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* Optymalizacja sekcji iframe */
-#uniswap iframe, #go-to-uniswap iframe, #switch-eth-pepe iframe {
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
+  #go-to-uniswap h2, #sw
